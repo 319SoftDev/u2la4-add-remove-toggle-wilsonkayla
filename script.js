@@ -61,3 +61,21 @@ const markAsUnread = () => {
     }
 }
 markButton.addEventListener('click', markAsUnread);
+
+// highlight thing 
+const toggleHighlight = () => {
+    heading.classList.toggle('highlighted');
+  }
+  subheading.addEventListener('click', toggleHighlight);
+
+//  add/remove is-selected 
+const toggleCheckbox = () => {
+    inbox.classList.toggle('is-selected');
+    if (inbox.classList.contains('is-selected')) {
+      actionButtons.classList.remove('hidden'); // Un-hide the action buttons
+    } else {
+      actionButtons.classList.add('hidden'); // Hide the action buttons
+    }
+  }
+
+  checkbox.addEventListener('click', toggleCheckbox);
